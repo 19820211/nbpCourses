@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,11 +9,16 @@
 </head>
 <body>
 
-<p id="currency-eur"></p>
-<p id="exchange-rate-eur"></p>
+<!--<p id="currency-eur"></p>-->
+<!--<p id="exchange-rate-eur"></p>-->
 
-<p id="currency-usd"></p>
-<p id="exchange-rate-usd"></p>
+<!--<p id="currency-usd"></p>-->
+<!--<p id="exchange-rate-usd"></p>-->
+
+<div th:each="currency: ${currencies}">
+    <p th:id="'currency-'+${currency}">Tekst</p>
+    <p th:id="'exchange-rate-'+${currency}">Tekst2</p>
+</div>
 
 </body>
 </html>
