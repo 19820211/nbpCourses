@@ -27,6 +27,7 @@ public class ApiController {
     public Currency index(@PathVariable String code){
 
         return currencyService.getCurrency(code);
+
     }
 
 }
